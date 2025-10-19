@@ -1,0 +1,134 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #3d1e1e;
+      overflow-x: hidden;
+      background-color: #d46a6a; /* deeper pastel red */
+    }
+
+    /* Parallax Hero Section */
+    .parallax {
+      background-image: url('jri.jpg');
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .parallax::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(150, 20, 20, 0.4);
+    }
+
+    .parallax h1 {
+      position: relative;
+      color: #fff;
+      font-size: 4.2em;
+      letter-spacing: 5px;
+      text-shadow: 0 0 15px rgba(255, 200, 200, 0.5);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #d46a6a, #b94545);
+  padding: 60px 30px;
+}
+
+/* Make all cards equal height and centered nicely */
+.card {
+  display: flex;
+  align-items: stretch; /* ensures equal height */
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 3px solid #b33333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image sizing fix: fills half of the card */
+.card img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Text area sizing fix */
+.text {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #421d1d;
+}
+
+.text h1 {
+  font-size: 2.3em;
+  color: #b33333;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.text p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #4a1f1f;
+}
+
+    /* Elegant Text-only Section */
+    .text-only {
+      background: linear-gradient(to right, #b94545, #d46a6a);
+      color: #ffffff;
+      text-align: center;
+      padding: 90px 25px;
+    }
+
+    .text-only h2 {
+      font-size: 2.2em;
+      margin-bottom: 25px;
+      color: #ffffff;
+      letter-spacing: 1.5px;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .text-only p {
+      max-width: 850px;
+      margin: 0 auto;
+      font-size: 1.15em;
+      line-height: 1.8;
+      color: #ffffff;
+    }
+
+    footer {
+      background-color: #8e1e1e;
+      color: #fffaf7;
+      text-align: center;
+      padding: 25px;
+      font-size: 1em;
+      letter-spacing: 1px;
+    }
